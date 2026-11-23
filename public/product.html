@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details - ShopSphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>✨ Free Express Delivery on orders over $75 | Cash on Delivery available nationwide</div>
+      <div class="top-bar-links">
+        <a href="/orders.html">Track Order</a>
+        <a href="#">Support 24/7</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="/index.html" class="brand-logo">
+        <div class="logo-badge">⚡</div>
+        <span>Shop<span class="highlight">Sphere</span></span>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <form action="/index.html" method="GET">
+          <input 
+            type="text" 
+            name="search" 
+            placeholder="Search headphones, laptops, watches..." 
+            autocomplete="off"
+          />
+          <button type="submit" aria-label="Search">🔍</button>
+        </form>
+      </div>
+
+      <!-- Navigation Actions -->
+      <nav class="nav-actions">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/index.html#catalog-section" class="nav-link">Shop</a>
+        <a href="/orders.html" class="nav-link">Orders</a>
+
+        <div id="header-user-section">
+          <a href="/login.html" class="nav-link">
+            <span>👤</span>
+            <span>Sign In</span>
+          </a>
+        </div>
+
+        <a href="/cart.html" class="cart-btn" id="header-cart-btn">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge" id="header-cart-count" style="display: none;">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs">
+      <a href="/index.html">Home</a>
+      <span class="separator">/</span>
+      <a href="/index.html#catalog-section" id="breadcrumb-category">Products</a>
+      <span class="separator">/</span>
+      <span class="current" id="breadcrumb-product-name">Loading...</span>
+    </div>
+
+    <!-- Product Detail Container -->
+    <div id="product-detail-container">
+      <div class="empty-state">
+        <div class="empty-state-icon">⏳</div>
+        <h3>Loading Product Details...</h3>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <section style="margin-top: 4rem; margin-bottom: 5rem;">
+      <h3 class="section-title" style="font-size: 1.4rem; margin-bottom: 1.5rem;">You Might Also Like</h3>
+      <div class="product-grid" id="related-products-grid">
+        <!-- Injected by JavaScript -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="brand-logo" style="color: var(--white);">
+            <div class="logo-badge">⚡</div>
+            <span>Shop<span class="highlight">Sphere</span></span>
+          </a>
+          <p>Your premier destination for verified lifestyle gadgets, audio, wearables, and accessories.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Categories</h4>
+          <ul>
+            <li><a href="/index.html?category=Audio">Audio</a></li>
+            <li><a href="/index.html?category=Wearables">Wearables</a></li>
+            <li><a href="/index.html?category=Electronics">Electronics</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help & Info</h4>
+          <ul>
+            <li><a href="/orders.html">My Orders</a></li>
+            <li><a href="/cart.html">Shopping Cart</a></li>
+            <li><a href="/checkout.html">Checkout</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Guaranteed Safe Delivery</h4>
+          <p>Pay with Cash on Delivery at your doorstep anywhere in the country.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 ShopSphere E-Commerce. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/product.js"></script>
+</body>
+</html>

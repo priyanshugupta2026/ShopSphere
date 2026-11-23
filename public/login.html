@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In & Register - ShopSphere</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div>✨ Free Express Delivery on orders over $75 | Cash on Delivery available nationwide</div>
+      <div class="top-bar-links">
+        <a href="/orders.html">Track Order</a>
+        <a href="#">Support 24/7</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container">
+      <a href="/index.html" class="brand-logo">
+        <div class="logo-badge">⚡</div>
+        <span>Shop<span class="highlight">Sphere</span></span>
+      </a>
+
+      <!-- Navigation Actions -->
+      <nav class="nav-actions">
+        <a href="/index.html" class="nav-link">Home</a>
+        <a href="/index.html#catalog-section" class="nav-link">Shop</a>
+        <a href="/orders.html" class="nav-link">Orders</a>
+
+        <div id="header-user-section">
+          <a href="/login.html" class="nav-link active">
+            <span>👤</span>
+            <span>Sign In</span>
+          </a>
+        </div>
+
+        <a href="/cart.html" class="cart-btn" id="header-cart-btn">
+          <span>🛒</span>
+          <span>Cart</span>
+          <span class="cart-badge" id="header-cart-count" style="display: none;">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="auth-container">
+      <div class="auth-header">
+        <div class="brand-logo" style="justify-content: center;">
+          <div class="logo-badge">⚡</div>
+          <span>Shop<span class="highlight">Sphere</span></span>
+        </div>
+        <h2>Welcome to ShopSphere</h2>
+        <p>Your portal to curated tech, audio & lifestyle gear</p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="auth-tabs">
+        <button class="auth-tab-btn active" id="tab-login-btn">Sign In</button>
+        <button class="auth-tab-btn" id="tab-register-btn">Create Account</button>
+      </div>
+
+      <div class="auth-body">
+        <!-- Demo Credentials Pill -->
+        <div class="demo-account-pill">
+          <div>
+            <strong>Quick Demo Credentials:</strong>
+            <div style="color: var(--gray-600); font-size: 0.775rem;">alex@example.com / password123</div>
+          </div>
+          <button class="btn btn-sm btn-outline" id="fill-demo-credentials" type="button">
+            Fill Demo
+          </button>
+        </div>
+
+        <!-- 1. Sign In Form -->
+        <form id="login-form">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="login-email">Email Address</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="login-email" 
+              placeholder="alex@example.com" 
+              required 
+            />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <label class="form-label" for="login-password">Password</label>
+            </div>
+            <div class="password-input-wrap">
+              <input 
+                type="password" 
+                class="form-control" 
+                id="login-password" 
+                placeholder="••••••••" 
+                required 
+              />
+              <button 
+                type="button" 
+                class="password-toggle-btn" 
+                data-target="login-password"
+                aria-label="Toggle password visibility"
+              >
+                👁
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Sign In to ShopSphere
+          </button>
+        </form>
+
+        <!-- 2. Create Account Form -->
+        <form id="register-form" style="display: none;">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="register-name">Full Name</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              id="register-name" 
+              placeholder="Alex Johnson" 
+              required 
+            />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="register-email">Email Address</label>
+            <input 
+              type="email" 
+              class="form-control" 
+              id="register-email" 
+              placeholder="alex@example.com" 
+              required 
+            />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label class="form-label" for="register-password">Password (at least 6 characters)</label>
+            <div class="password-input-wrap">
+              <input 
+                type="password" 
+                class="form-control" 
+                id="register-password" 
+                placeholder="••••••••" 
+                minlength="6" 
+                required 
+              />
+              <button 
+                type="button" 
+                class="password-toggle-btn" 
+                data-target="register-password"
+                aria-label="Toggle password visibility"
+              >
+                👁
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" for="register-confirm-password">Confirm Password</label>
+            <div class="password-input-wrap">
+              <input 
+                type="password" 
+                class="form-control" 
+                id="register-confirm-password" 
+                placeholder="••••••••" 
+                minlength="6" 
+                required 
+              />
+              <button 
+                type="button" 
+                class="password-toggle-btn" 
+                data-target="register-confirm-password"
+                aria-label="Toggle password visibility"
+              >
+                👁
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Create ShopSphere Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+        <div>&copy; 2026 ShopSphere E-Commerce. All rights reserved.</div>
+        <div>🔒 Encrypted Auth & Password Hashing</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+</html>
